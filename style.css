@@ -1,0 +1,468 @@
+/* style.css mejorado */
+
+/* Variables para colores */
+:root {
+  --color-fondo: #fafafa;
+  --color-primario: #2c3e50;
+  --color-secundario: #2980b9;
+  --color-texto: #444;
+  --color-texto-claro: #777;
+  --color-boton: #2980b9;
+  --color-boton-hover: #1c5980;
+  --color-sombra: rgba(0, 0, 0, 0.12);
+}
+
+/* Reset y base */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+}
+
+header {
+  background: var(--color-primario);
+  color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 3px 8px var(--color-sombra);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 2px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+nav a,
+nav button {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  transition: color 0.3s ease;
+  border-radius: 4px;
+}
+
+nav a:hover,
+nav button:hover {
+  color: var(--color-secundario);
+  background-color: rgba(255 255 255 / 0.15);
+}
+
+main {
+  padding: 3rem 2rem 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+}
+
+/* Categorías */
+.categorias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.categoria-btn {
+  display: block;
+  padding: 1.7rem 1rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--color-sombra);
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--color-primario);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.categoria-btn:hover {
+  background: var(--color-secundario);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(41, 128, 185, 0.6);
+  transform: translateY(-3px);
+}
+
+
+
+.ofertas {
+  background-color: #fff8e1;
+  padding: 2rem;
+  text-align: center;
+}
+
+.ofertas h2 {
+  color: #d32f2f;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.ofertas-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.oferta-item {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.oferta-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.oferta-item h3 {
+  margin: 0.5rem 0;
+}
+
+.precio-original {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.precio-oferta {
+  color: #d32f2f;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--color-primario);
+  color: #eee;
+  text-align: center;
+  padding: 1.2rem 1rem;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.8px;
+}
+
+/* Productos */
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.producto {
+  background: #fff;
+  padding: 1.3rem 1.2rem 1.8rem;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 4px 14px var(--color-sombra);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: default;
+}
+
+.producto:hover {
+  box-shadow: 0 10px 30px rgba(41, 128, 185, 0.3);
+  transform: translateY(-6px);
+}
+
+.producto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover img {
+  transform: scale(1.05);
+}
+
+.producto h3 {
+  margin: 0.5rem 0 0.6rem;
+  font-weight: 700;
+  color: var(--color-primario);
+  font-size: 1.2rem;
+}
+
+.producto p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-secundario);
+  margin-bottom: 0.9rem;
+}
+
+.producto button {
+  margin-top: 0.4rem;
+  padding: 0.55rem 1.2rem;
+  background-color: var(--color-boton);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.producto button:hover {
+  background-color: var(--color-boton-hover);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+
+.contacto {
+  max-width: 600px;
+  margin: 2rem auto;
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contacto h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.contacto label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+.contacto input,
+.contacto textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.contacto textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contacto button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.contacto button:hover {
+  background-color: #444;
+}
+
+
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.producto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 100%;
+  max-width: 250px;
+  height: 100%;
+  min-height: 400px;
+  /* Altura fija mínima para igualar todas las tarjetas */
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  /* Altura fija */
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+
+
+.producto h3,
+.producto p {
+  margin: 10px 0;
+}
+
+.producto button {
+  margin-top: auto;
+  width: 100%;
+  padding: 10px;
+  background-color: #730099;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.producto button:hover {
+  background-color: #9500cc;
+}
+
+
+
+
+.catalogo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.categoria {
+  position: relative;
+  width: 280px;
+  height: 160px;
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categoria span {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+  z-index: 2;
+}
+
+.categoria::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.3s ease;
+  z-index: 1;
+}
+
+.categoria:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+
+.categoria:hover::after {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #6a0dad;
+}
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+form button {
+  background-color: #6a0dad;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  width: 100%;
+}
+
+form button:hover {
+  background-color: #5300a8;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}

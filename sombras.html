@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q'Ver ᚠ - Sombras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Q'Ver ᚠ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><button id="btn-ver-carrito"
+                        style="cursor:pointer; background:none; border:none; color:inherit; font:inherit;">🛒 Carrito
+                        (<span id="contador-carrito">0</span>)</button></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sombras</h2>
+        <div class="productos-grid">
+            <div class="producto">
+                <img src="imagenes/maquillaje1.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Nude</h3>
+                <p>$6200</p>
+                <button>Agregar al carrito</button>
+            </div>
+            <div class="producto">
+                <img src="imagenes/maquillaje2.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Neon</h3>
+                <p>$7000</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+             <div class="producto">
+                <img src="imagenes/maquillaje2.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Neon</h3>
+                <p>$7000</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+
+             <div class="producto">
+                <img src="imagenes/maquillaje4.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Neon</h3>
+                <p>$7000</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+             <div class="producto">
+                <img src="imagenes/maquillaje5.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Neon</h3>
+                <p>$7000</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+
+             <div class="producto">
+                <img src="imagenes/maquillaje4.jpg" alt="Paleta de sombras 2">
+                <h3>Paleta Neon</h3>
+                <p>$7000</p>
+                <button>Agregar al carrito</button>
+            </div>
+
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Q'Ver ᚠ - Todos los derechos reservados</p>
+    </footer>
+
+
+
+    <!-- Modal carrito -->
+<div id="modal-carrito" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
+  background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:400px; max-height:80vh; overflow-y:auto; position:relative;">
+    <button id="cerrar-carrito" style="position:absolute; top:10px; right:10px; cursor:pointer; font-size:18px; background:none; border:none;">✖</button>
+    <h2>Tu Carrito</h2>
+    <div id="productos-carrito" style="margin-top:15px;"></div>
+    <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
+    <button id="vaciar-carrito" style="background:#c00; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">Vaciar carrito</button>
+  </div>
+</div>
+
+
+    <script src="carrito.js"></script>
+
+</body>
+
+</html>

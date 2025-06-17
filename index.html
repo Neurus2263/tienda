@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q'Ver ᚠ - Inicio</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Q'Ver ᚠ</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><button id="btn-ver-carrito"
+                        style="cursor:pointer; background:none; border:none; color:inherit; font:inherit;">🛒 Carrito
+                        (<span id="contador-carrito">0</span>)</button></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Catálogo</h2>
+        <div class="catalogo-grid">
+            <a href="ropa.html" class="categoria" style="background-image: url('imagenes/seccionropa.jpg');">
+                <span>Ropa</span>
+            </a>
+            <a href="maquillaje.html" class="categoria" style="background-image: url('imagenes/seccionmaquillajes.jpg');">
+                <span>Maquillajes</span>
+            </a>
+            <a href="hogar.html" class="categoria" style="background-image: url('imagenes/seccioncosasdelhogar.jpg');">
+                <span>Hogar</span>
+            </a>
+        </div>
+
+
+        <!-- Sección de Ofertas -->
+        <section class="ofertas">
+            <h2>🔥 Ofertas Especiales</h2>
+            <div class="ofertas-grid">
+                <div class="oferta-item">
+                    <img src="imagenes/vajilla1.jpg" alt="Producto en oferta 1">
+                    <h3>Remera Estampada</h3>
+                    <p><span class="precio-original">$5.000</span> <span class="precio-oferta">$3.500</span></p>
+                </div>
+                <div class="oferta-item">
+                    <img src="imagenes/maquillaje1.jpg" alt="Producto en oferta 2">
+                    <h3>Set de Maquillaje</h3>
+                    <p><span class="precio-original">$8.000</span> <span class="precio-oferta">$5.200</span></p>
+                </div>
+                <div class="oferta-item">
+                    <img src="imagenes/toallas1.jpg" alt="Producto en oferta 3">
+                    <h3>Almohadón Decorativo</h3>
+                    <p><span class="precio-original">$3.200</span> <span class="precio-oferta">$2.400</span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Q'Ver ᚠ - Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
