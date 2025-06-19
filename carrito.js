@@ -1,6 +1,5 @@
-document.addEventListener('DOMContentLoaded', () => {
-  // TODO: Todo tu código JS va acá adentro
 
+document.addEventListener('DOMContentLoaded', () => {
   // Obtener elementos
   const btnVerCarrito = document.getElementById('btn-ver-carrito');
   const modalCarrito = document.getElementById('modal-carrito');
@@ -9,6 +8,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const totalCarritoSpan = document.getElementById('total-carrito');
   const contadorCarrito = document.getElementById('contador-carrito');
   const vaciarCarritoBtn = document.getElementById('vaciar-carrito');
+  const finalizarCompraBtn = document.getElementById('finalizarCompraBtn');
+if (finalizarCompraBtn) {
+  finalizarCompraBtn.addEventListener('click', () => {
+    if (carrito.length === 0) {
+      alert("Tu carrito está vacío.");
+      return;
+    }
+    guardarCarrito();
+    window.location.href = "envio.html";
+  });
+}
+
 
   let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
@@ -77,6 +88,18 @@ document.addEventListener('DOMContentLoaded', () => {
       guardarCarrito();
       actualizarContador();
       mostrarCarrito();
+    });
+  }
+
+  if (finalizarCompraBtn) {
+    finalizarCompraBtn.addEventListener('click', () => {
+      if (carrito.length === 0) {
+        alert("El carrito está vacío. Agrega productos antes de continuar.");
+        return;
+      }
+      // Guardamos carrito y vamos a página de envío
+      guardarCarrito();
+      window.location.href = "envio.html";
     });
   }
 

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pago - Q'Ver ᚠ</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1 class="titulo-centro">Finalizar Pago</h1>
+  </header>
+
+  <main class="formulario-pago">
+    <form id="formPago">
+      <h2>Datos del pago</h2>
+
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required />
+
+      <label for="metodo">Método de pago</label>
+      <select id="metodo" name="metodo" required>
+        <option value="">Seleccioná una opción</option>
+        <option value="tarjeta">Tarjeta de crédito / débito</option>
+        <option value="efectivo">Efectivo (al recibir)</option>
+        <option value="transferencia">Transferencia bancaria</option>
+        <option value="mercado-pago">Mercado Pago</option>
+
+      </select>
+
+      <button type="submit" class="boton-pago">Confirmar compra</button>
+    </form>
+
+    <div id="resumenFinal">
+      <h3>Resumen del pedido</h3>
+      <div id="detallePedido"></div>
+      <p id="montoTotal"></p>
+    </div>
+  </main>
+
+
+
+<!-- Modal de compra exitosa -->
+<div id="modal-exito" class="modal-oculto">
+  <div class="modal-contenido">
+    <h2>✅ ¡Compra exitosa!</h2>
+    <p>Gracias por tu compra. Te esperamos nuevamente 💚</p>
+    <button id="volverInicioBtn">Volver al inicio</button>
+  </div>
+</div>
+
+
+
+  <script src="pago.js"></script>
+</body>
+</html>

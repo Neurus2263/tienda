@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Envío - Q'Ver ᚠ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Envío o Retiro</h1>
+    </header>
+
+    <main>
+        <div id="resumenCarrito"></div>
+
+        <h2>¿Cómo querés recibir tu pedido?</h2>
+        <label>
+            <input type="radio" name="tipoEnvio" value="retiro" checked>
+            Retiro en local (Gratis)
+        </label><br>
+        <label>
+            <input type="radio" name="tipoEnvio" value="envio">
+            Envío a domicilio (+$1500)
+        </label><br><br>
+
+        <button id="continuarPagoBtn">Continuar al pago</button>
+
+        <p id="totalFinal"></p>
+    </main>
+   
+    <script src="carrito.js"></script>
+
+    <script src="envio.js"></script>
+
+
+
+</body>
+
+</html>
