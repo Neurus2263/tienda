@@ -1,55 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <title>Pago - Q'Ver ᚠ</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Finalizar Pago - Q'Ver ᚠ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main class="contenedor-pago">
+    <h1>Confirmación de Compra</h1>
+    
+    <section id="detallePedido" class="resumen-compra"></section>
+    <p id="montoTotal" class="total-compra"></p>
 
-  <header>
-    <h1 class="titulo-centro">Finalizar Pago</h1>
-  </header>
+    <form id="formPago" class="form-pago">
+      <label for="nombre">Tu nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
 
-  <main class="formulario-pago">
-    <form id="formPago">
-      <h2>Datos del pago</h2>
-
-      <label for="nombre">Nombre completo</label>
-      <input type="text" id="nombre" name="nombre" required />
-
-      <label for="metodo">Método de pago</label>
+      <label for="metodo">Método de pago:</label>
       <select id="metodo" name="metodo" required>
-        <option value="">Seleccioná una opción</option>
-        <option value="tarjeta">Tarjeta de crédito / débito</option>
-        <option value="efectivo">Efectivo (al recibir)</option>
-        <option value="transferencia">Transferencia bancaria</option>
+        <option value="">Seleccioná</option>
+        <option value="efectivo">Efectivo</option>
+        <option value="transferencia">Transferencia</option>
         <option value="mercado-pago">Mercado Pago</option>
-
       </select>
 
-      <button type="submit" class="boton-pago">Confirmar compra</button>
+      <button type="submit" class="btn-confirmar">Confirmar compra</button>
     </form>
-
-    <div id="resumenFinal">
-      <h3>Resumen del pedido</h3>
-      <div id="detallePedido"></div>
-      <p id="montoTotal"></p>
-    </div>
   </main>
 
-
-
-<!-- Modal de compra exitosa -->
-<div id="modal-exito" class="modal-oculto">
-  <div class="modal-contenido">
-    <h2>✅ ¡Compra exitosa!</h2>
-    <p>Gracias por tu compra. Te esperamos nuevamente 💚</p>
-    <button id="volverInicioBtn">Volver al inicio</button>
+  <!-- MODAL -->
+  <div id="modal-exito" class="modal-exito oculto">
+    <div class="modal-contenido">
+      <h2>¡Compra exitosa!</h2>
+      <p>Gracias por tu compra 🛍️</p>
+      <button id="volverInicioBtn" class="btn-volver">Volver al inicio</button>
+    </div>
   </div>
-</div>
-
-
 
   <script src="pago.js"></script>
 </body>

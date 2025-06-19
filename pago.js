@@ -5,6 +5,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalExito = document.getElementById("modal-exito");
   const volverInicioBtn = document.getElementById("volverInicioBtn");
 
+  modalExito?.classList.remove("mostrar");
+
   const datosCompra = JSON.parse(localStorage.getItem("datosCompra")) || {
     carrito: [],
     tipoEnvio: "retiro",
@@ -12,7 +14,6 @@ document.addEventListener("DOMContentLoaded", () => {
     totalFinal: 0
   };
 
-  // Mostrar resumen
   datosCompra.carrito.forEach(producto => {
     const p = document.createElement("p");
     const cantidad = producto.cantidad || 1;
@@ -26,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   montoTotal.textContent = `Total a pagar: $${datosCompra.totalFinal}`;
 
-  // Confirmar compra
   formPago.addEventListener("submit", e => {
     e.preventDefault();
 
@@ -39,15 +39,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (metodo === "mercado-pago") {
-      // Simulación: redirigimos a Mercado Pago
       window.location.href = "https://www.mercadopago.com.ar/";
       return;
     }
 
-    // Si no es MP, mostramos modal
-    modalExito.classList.add("mostrar");
+    if (modalExito && nombre && metodo) {
+      modalExito.classList.add("mostrar");
+    }
 
-    // Limpiar carrito
     localStorage.removeItem("carrito");
     localStorage.removeItem("datosCompra");
   });
