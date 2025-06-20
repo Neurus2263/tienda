@@ -443,6 +443,85 @@ footer {
 }
 
 
+/* FORMULARIO DE CONTACTO */
+.form-container {
+  max-width: 600px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--color-sombra);
+}
+
+.form-container h2 {
+  text-align: center;
+  color: var(--color-primario);
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-container label {
+  font-weight: 600;
+  color: var(--color-texto);
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.form-container input:focus,
+.form-container textarea:focus {
+  border-color: var(--color-secundario);
+  outline: none;
+}
+
+.form-container button {
+  background-color: var(--color-boton);
+  color: white;
+  border: none;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+}
+
+.form-container button:hover {
+  background-color: var(--color-boton-hover);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .form-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .form-container h2 {
+    font-size: 1.6rem;
+  }
+
+  .form-container input,
+  .form-container textarea {
+    font-size: 0.95rem;
+  }
+}
+
+
 
 @media (max-width: 768px) {
 

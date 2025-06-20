@@ -15,9 +15,12 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   datosCompra.carrito.forEach(producto => {
-    const p = document.createElement("p");
     const cantidad = producto.cantidad || 1;
-    p.textContent = `${producto.nombre} x${cantidad} - $${producto.precio * cantidad}`;
+    const precioUnitario = parseFloat(producto.precioUnitario) || 0;
+    const subtotal = precioUnitario * cantidad;
+
+    const p = document.createElement("p");
+    p.textContent = `${producto.nombre} x${cantidad} - $${subtotal.toFixed(2)}`;
     detallePedido.appendChild(p);
   });
 
@@ -25,7 +28,7 @@ document.addEventListener("DOMContentLoaded", () => {
   envio.textContent = `Envío: ${datosCompra.tipoEnvio === "envio" ? "$" + datosCompra.costoEnvio : "Gratis"}`;
   detallePedido.appendChild(envio);
 
-  montoTotal.textContent = `Total a pagar: $${datosCompra.totalFinal}`;
+  montoTotal.textContent = `Total a pagar: $${(datosCompra.totalFinal || 0).toFixed(2)}`;
 
   formPago.addEventListener("submit", e => {
     e.preventDefault();

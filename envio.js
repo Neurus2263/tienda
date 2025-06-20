@@ -5,17 +5,23 @@ const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 let total = 0;
 
 carrito.forEach(item => {
+  const precioUnitario = parseFloat(item.precioUnitario) || 0;
+  const cantidad = item.cantidad || 1;
+  const subtotal = precioUnitario * cantidad;
+
   const p = document.createElement("p");
-  p.textContent = `${item.nombre} x${item.cantidad || 1} - $${item.precio * (item.cantidad || 1)}`;
+  p.textContent = `${item.nombre} x${cantidad} - $${subtotal.toFixed(2)}`;
   resumen.appendChild(p);
-  total += item.precio * (item.cantidad || 1);
+
+  total += subtotal;
 });
 
 function calcularTotalConEnvio() {
-  const tipoEnvio = document.querySelector('input[name="tipoEnvio"]:checked').value;
+  const tipoEnvio = document.querySelector('input[name="tipoEnvio"]:checked')?.value || "retiro";
   const costoEnvio = tipoEnvio === "envio" ? 1500 : 0;
   const totalConEnvio = total + costoEnvio;
-  totalFinal.textContent = `Total con ${tipoEnvio === "envio" ? "envío" : "retiro"}: $${totalConEnvio}`;
+
+  totalFinal.textContent = `Total con ${tipoEnvio === "envio" ? "envío" : "retiro"}: $${totalConEnvio.toFixed(2)}`;
 
   const datosFinales = {
     carrito: carrito,
@@ -38,3 +44,4 @@ document.getElementById("continuarPagoBtn").addEventListener("click", () => {
 
 // Calcular al cargar
 calcularTotalConEnvio();
+
