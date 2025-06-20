@@ -39,7 +39,7 @@
                 <button>Agregar al carrito</button>
             </div>
 
-             <div class="producto">
+            <div class="producto">
                 <img src="imagenes/base3.jpg" alt="Paleta de sombras 2">
                 <h3>Polvo Base NARS</h3>
                 <p>$17500</p>
@@ -47,23 +47,22 @@
             </div>
 
 
-             <div class="producto">
+            <div class="producto">
                 <img src="imagenes/bases4.jpg" alt="Paleta de sombras 2">
                 <h3>Sombras Base</h3>
                 <p>$20000</p>
                 <button>Agregar al carrito</button>
             </div>
 
-             <div class="producto">
-                <img src="imagenes/base5.jpg"
-                 alt="Paleta de sombras 2">
+            <div class="producto">
+                <img src="imagenes/base5.jpg" alt="Paleta de sombras 2">
                 <h3>Sombras Piel</h3>
                 <p>$18000</p>
                 <button>Agregar al carrito</button>
             </div>
 
 
-             <div class="producto">
+            <div class="producto">
                 <img src="imagenes/base1.jpg" alt="Paleta de sombras 2">
                 <h3>Base Airbrush oferta!</h3>
                 <p>$11000</p>
@@ -80,25 +79,19 @@
 
 
 
-  <!-- Modal carrito -->
-<div id="modal-carrito" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
-  background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
-  <div style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:400px; max-height:80vh; overflow-y:auto; position:relative;">
-    <button id="cerrar-carrito" style="position:absolute; top:10px; right:10px; cursor:pointer; font-size:18px; background:none; border:none;">✖</button>
-    <h2>Tu Carrito</h2>
-    <div id="productos-carrito" style="margin-top:15px;"></div>
-    <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
-
-    <button id="vaciar-carrito" style="background:#c00; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">Vaciar carrito</button>
-    
-    <!-- 🚀 Botón nuevo para ir a envio.html -->
-    <button id="finalizarCompraBtn" style="margin-top: 10px; background: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; width: 100%;">
-      Continuar con la compra
-    </button>
-  </div>
-</div>
-
-
+    <!-- Modal carrito -->
+    <div id="modal-carrito" class="modal-carrito">
+        <div class="modal-carrito-contenido">
+            <button id="cerrar-carrito" class="btn-cerrar">✖</button>
+            <h2>Tu Carrito 🛒</h2>
+            <div id="productos-carrito"></div>
+            <p class="total-carrito">Total: $<span id="total-carrito">0</span></p>
+            <div class="botones-carrito">
+                <button id="vaciar-carrito" class="btn-rojo">Vaciar carrito</button>
+                <button id="finalizarCompraBtn" class="btn-confirmar">Finalizar compra</button>
+            </div>
+        </div>
+    </div>
 
     <script src="carrito.js"></script>
 

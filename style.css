@@ -82,11 +82,44 @@ h2 {
 
 .productos-grid,
 .ofertas-grid {
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
   padding: 0 1rem;
   justify-items: center;
+
+}
+
+.seccion-ofertas {
+  background-color: #fff8d6;
+  padding: 3rem 2rem;
+  margin-top: 3rem;
+  border-radius: 16px;
+   box-shadow: 0 4px 14px rgba(255, 193, 7, 0.15);
+}
+
+
+.titulo-oferta {
+  font-size: 2.3rem;
+  text-align: center;
+  color: #d35400;
+  font-weight: 800;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-oferta::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, #ffc107, #ff8c00);
+  border-radius: 3px;
 }
 
 .producto,
@@ -215,7 +248,8 @@ footer {
 }
 
 /* ENVÍO Y PAGO */
-.contenedor-pago, .form-envio {
+.contenedor-pago,
+.form-envio {
   max-width: 600px;
   margin: 2rem auto;
   padding: 2rem;
@@ -251,7 +285,7 @@ footer {
   padding: 1rem;
   border-radius: 8px;
   font-size: 0.95rem;
-  box-shadow: 0 1px 6px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
 }
 
 .total-compra {
@@ -283,7 +317,7 @@ footer {
 .modal-exito {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,19 +343,111 @@ footer {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
+
+.modal-carrito {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modal-carrito-contenido {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  overflow-y: auto;
+  max-height: 90vh;
+  position: relative;
+}
+
+.modal-carrito-contenido h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--color-primario);
+  text-align: center;
+}
+
+#productos-carrito>div {
+  border-bottom: 1px solid #ddd;
+  padding: 0.7rem 0;
+}
+
+#productos-carrito p {
+  margin: 0.2rem 0;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+.total-carrito {
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: right;
+  color: var(--color-secundario);
+  margin-top: 1rem;
+}
+
+.btn-cerrar {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.btn-cerrar:hover {
+  color: #000;
+}
+
+.botones-carrito {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.btn-rojo {
+  background-color: #c0392b;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-rojo:hover {
+  background-color: #e74c3c;
+}
+
 @keyframes aparecer {
   from {
     transform: scale(0.8);
     opacity: 0;
   }
+
   to {
     transform: scale(1);
     opacity: 1;
   }
 }
 
+
+
 @media (max-width: 768px) {
-  .contenedor-pago, .form-envio {
+
+  .contenedor-pago,
+  .form-envio {
     margin: 1rem;
     padding: 1.5rem;
   }
@@ -338,6 +464,7 @@ footer {
 }
 
 @media (max-width: 480px) {
+
   .form-envio input,
   .form-envio select,
   .form-envio textarea,
@@ -350,54 +477,3 @@ footer {
     padding: 1.5rem;
   }
 }
-
-
-
-.seccion-ofertas {
-  background-color: #fff8d6;
-  padding: 3rem 2rem;
-  margin-top: 3rem;
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(255, 193, 7, 0.15);
-}
-
-.titulo-oferta {
-  font-size: 2.3rem;
-  text-align: center;
-  color: #d35400;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 2rem;
-  position: relative;
-  display: inline-block;
-}
-
-.titulo-oferta::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -6px;
-  width: 100%;
-  height: 6px;
-  background: linear-gradient(90deg, #ffc107, #ff8c00);
-  border-radius: 3px;
-}
-
-.icono-fuego {
-  font-size: 2rem;
-  margin-right: 0.4rem;
-  animation: flame 0.9s infinite alternate ease-in-out;
-}
-
-@keyframes flame {
-  from {
-    transform: scale(1) rotate(0deg);
-  }
-  to {
-    transform: scale(1.2) rotate(10deg);
-  }
-}
-
-
-
-

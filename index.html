@@ -39,76 +39,68 @@
             </a>
         </div>
 
-<section class="seccion-ofertas">
-  <h2 class="titulo-oferta"><span class="icono-fuego">🔥</span> Ofertas!</h2>
+        <section class="seccion-ofertas">
+            <h2 class="titulo-oferta"><span class="icono-fuego">🔥</span> Ofertas!</h2>
 
-  <div class="ofertas-grid">
-    <div class="oferta-item">
-      <img src="imagenes/pantaloneshombrejogins.jpg" alt="Producto en oferta">
-      <h3>Pantalones Joggins Hombre</h3>
-      <p>2 x $20000</p>
-      <button class="btn-agregar">Agregar al carrito</button>
-    </div>
+            <div class="ofertas-grid">
+                <div class="oferta-item" data-cantidad="2" data-precio="20000">
+                    <img src="imagenes/pantaloneshombrejogins.jpg" alt="Producto en oferta">
+                    <h3>Joggins Hombre</h3>
+                    <p>2 x $20.000</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
 
-    <div class="oferta-item">
-      <img src="imagenes/pantalonejoginsmujer.jpg" alt="Producto en oferta">
-      <h3>Pantalones Joggins Mujer</h3>
-      <p>2 x $20000</p>
-      <button class="btn-agregar">Agregar al carrito</button>
-    </div>
+                <div class="oferta-item" data-cantidad="2" data-precio="20000">
+                    <img src="imagenes/pantalonejoginsmujer.jpg" alt="Producto en oferta">
+                    <h3>Joggins Mujer</h3>
+                    <p>2 x $20.000</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
 
-    <div class="oferta-item">
-      <img src="imagenes/conjuntoniño.jpg" alt="Producto en oferta">
-      <h3>Conjunto NASA </h3>
-      <p>$6000</p>
-      <button class="btn-agregar">Agregar al carrito</button>
-    </div>
+                <div class="oferta-item" data-cantidad="1" data-precio="6000">
+                    <img src="imagenes/conjuntoniño.jpg" alt="Producto en oferta">
+                    <h3>Conjunto NASA </h3>
+                    <p>$6.000</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
 
-    <div class="oferta-item">
-      <img src="imagenes/toallas1.jpg" alt="Producto en oferta">
-      <h3>Toallas Colores Varios</h3>
-      <p>2 x $19000</p>
-      <button class="btn-agregar">Agregar al carrito</button>
-    </div>
-    <!-- Más productos -->
-  </div>
-</section>
-
-
+                <div class="oferta-item" data-cantidad="2" data-precio="19000">
+                    <img src="imagenes/toallas1.jpg" alt="Producto en oferta">
+                    <h3>Toallas Colores Varios</h3>
+                    <p>2 x $19.000</p>
+                    <button class="btn-agregar">Agregar al carrito</button>
+                </div>
+                <!-- Más productos -->
+            </div>
+        </section>
 
 
-    <!-- Modal carrito -->
-    <div id="modal-carrito" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; 
-  background: rgba(0,0,0,0.5); justify-content:center; align-items:center; z-index:9999;">
-        <div
-            style="background:#fff; padding:20px; border-radius:8px; width:90%; max-width:400px; max-height:80vh; overflow-y:auto; position:relative;">
-            <button id="cerrar-carrito"
-                style="position:absolute; top:10px; right:10px; cursor:pointer; font-size:18px; background:none; border:none;">✖</button>
-            <h2>Tu Carrito</h2>
-            <div id="productos-carrito" style="margin-top:15px;"></div>
-            <p><strong>Total: $<span id="total-carrito">0</span></strong></p>
 
-            <button id="vaciar-carrito"
-                style="background:#c00; color:#fff; border:none; padding:10px 15px; border-radius:5px; cursor:pointer;">Vaciar
-                carrito</button>
 
-            <!-- 🚀 Botón nuevo para ir a envio.html -->
-            <button id="finalizarCompraBtn"
-                style="margin-top: 10px; background: green; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; width: 100%;">
-                Continuar con la compra
-            </button>
+        <!-- Modal carrito -->
+        <div id="modal-carrito" class="modal-carrito">
+            <div class="modal-carrito-contenido">
+                <button id="cerrar-carrito" class="btn-cerrar">✖</button>
+                <h2>Tu Carrito 🛒</h2>
+                <div id="productos-carrito"></div>
+                <p class="total-carrito">Total: $<span id="total-carrito">0</span></p>
+                <div class="botones-carrito">
+                    <button id="vaciar-carrito" class="btn-rojo">Vaciar carrito</button>
+                    <button id="finalizarCompraBtn" class="btn-confirmar">Finalizar compra</button>
+                </div>
+            </div>
         </div>
-    </div>
 
 
 
-    <footer>
-        <p>&copy; 2025 Q'Ver ᚠ - Todos los derechos reservados</p>
-    </footer>
+
+        <footer>
+            <p>&copy; 2025 Q'Ver ᚠ - Todos los derechos reservados</p>
+        </footer>
 
 
 
-    <script src="carrito.js"></script>
+        <script src="carrito.js"></script>
 </body>
 
 </html>
