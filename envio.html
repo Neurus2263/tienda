@@ -2,40 +2,38 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Envío - Q'Ver ᚠ</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Envío - Q'Ver ᚠ</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Envío o Retiro</h1>
-    </header>
+  <header>
+    <h1>Envío o Retiro</h1>
+  </header>
 
-    <main>
-        <div id="resumenCarrito"></div>
+  <main class="form-envio">
+    <div id="resumenCarrito" class="resumen-envio"></div>
 
-        <h2>¿Cómo querés recibir tu pedido?</h2>
-        <label>
-            <input type="radio" name="tipoEnvio" value="retiro" checked>
-            Retiro en local (Gratis)
-        </label><br>
-        <label>
-            <input type="radio" name="tipoEnvio" value="envio">
-            Envío a domicilio (+$1500)
-        </label><br><br>
+    <h2>¿Cómo querés recibir tu pedido?</h2>
 
-        <button id="continuarPagoBtn">Continuar al pago</button>
+    <label>
+      <input type="radio" name="tipoEnvio" value="retiro" checked>
+      Retiro en local (Gratis)
+    </label>
+    <label>
+      <input type="radio" name="tipoEnvio" value="envio">
+      Envío a domicilio (+$1500)
+    </label>
 
-        <p id="totalFinal"></p>
-    </main>
-   
-    <script src="carrito.js"></script>
+    <p id="totalFinal" class="total-compra"></p>
 
-    <script src="envio.js"></script>
+    <button id="continuarPagoBtn" class="btn-confirmar">Continuar al pago</button>
+  </main>
 
-
-
+  <script src="carrito.js"></script>
+  <script src="envio.js"></script>
 </body>
 
 </html>
